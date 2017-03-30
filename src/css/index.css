@@ -1,3 +1,19 @@
-main { width: 100%; }
+main { width: 100%; font-size: 14px; }
 
-main > nav { padding: 0 30px; height: 38px; background-color: #90c31f; line-height: 38px; }
+main > nav { padding: 0 30px; height: 38px; background-color: #90c31f; line-height: 38px; display: flex; }
+
+main > nav .goodslist { flex: 1.8; text-align: center; background-color: #6d9d03; color: #fff; }
+
+main > nav .goodslist i { margin-left: 15px; }
+
+main > nav ul { flex: 8.2; display: flex; }
+
+main > nav ul li { width: 11%; text-align: center; }
+
+main > nav ul li:first-child { background-color: #77b001; }
+
+main > nav ul li:hover { background-color: #77b001; }
+
+main > nav ul li a { color: #fff; }
+
+main > section { padding: 0 30px; }

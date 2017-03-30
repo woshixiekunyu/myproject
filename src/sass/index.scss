@@ -2,10 +2,35 @@
 
 main{
 	width: 100%;
+	font-size:14px;
 	&>nav{
 		padding: 0 30px;
 		height: 38px;
 		background-color: $bgc;
 		line-height: 38px;
+		display:flex;
+		.goodslist{
+			flex:1.8;
+			text-align:center;
+			background-color: #6d9d03;
+			color:#fff;
+			i{margin-left: 15px;}
+		}
+		ul{
+			flex:8.2;
+			display:flex;
+			li{
+				width:11%;
+				text-align:center;
+				&:first-child{background-color: #77b001;}
+				&:hover{
+					background-color: #77b001
+				}
+				a{color:#fff;}
+			}
+		}
+	}
+	&>section{
+		padding: 0 30px;
 	}
 }
