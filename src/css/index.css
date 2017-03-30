@@ -2,7 +2,7 @@ main { width: 100%; font-size: 14px; }
 
 main > nav { padding: 0 30px; height: 38px; background-color: #90c31f; line-height: 38px; display: flex; }
 
-main > nav .goodslist { flex: 1.8; text-align: center; background-color: #6d9d03; color: #fff; }
+main > nav .goodslist { width: 216px; text-align: center; background-color: #6d9d03; color: #fff; }
 
 main > nav .goodslist i { margin-left: 15px; }
 
@@ -16,4 +16,16 @@ main > nav ul li:hover { background-color: #77b001; }
 
 main > nav ul li a { color: #fff; }
 
-main > section { padding: 0 30px; }
+main > section { padding: 0 30px; display: flex; height: 320px; }
+
+main > section aside { width: 216px; }
+
+main > section aside ul { padding: 0 10px; }
+
+main > section aside ul li { line-height: 45px; text-align: center; border-bottom: 1px dashed #ccc; }
+
+main > section aside ul li span { float: right; margin-right: 20px; }
+
+main > section .banner { width: 760px; background-color: yellow; }
+
+main > section .download { flex: 1; background-color: blue; }
