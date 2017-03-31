@@ -1,4 +1,38 @@
-main { padding-bottom: 1000px; width: 100%; font-size: 14px; }
+nav { width: 100%; font-size: 12px; }
+
+nav .second { padding: 30px 30px; display: flex; color: #666666; }
+
+nav .second .logo { flex: 3; }
+
+nav .second .logo a { margin-left: 20px; display: block; width: 196px; height: 56px; background: url("../img/index_logo.gif"); }
+
+nav .second .baozhang { flex: 2; }
+
+nav .second .baozhang ul li { float: left; text-align: center; padding: 0 10px; border-right: 1px dashed #ccc; }
+
+nav .second .baozhang ul li span { display: block; }
+
+nav .second .baozhang ul li:last-child { border-right: 0; }
+
+nav .second .sec_right { flex: 2; }
+
+nav .second .sec_right .search { border: 2px solid #90c31f; height: 30px; position: relative; display: flex; }
+
+nav .second .sec_right .search span { position: absolute; top: 5px; left: 3px; flex: 1; }
+
+nav .second .sec_right .search input { margin: 3px 0; flex: 8; border: 0; margin-left: 24px; border-left: 1px solid #ddd; }
+
+nav .second .sec_right .search input:focus { outline: none; }
+
+nav .second .sec_right .search button { flex: 2; height: 100%; background-color: #90c31f; border: 0; color: #fff; font-size: 14px; font-weight: 600; }
+
+nav .second .sec_right .hot { line-height: 26px; }
+
+nav .second .sec_right .hot a { color: #666666; }
+
+nav .second .sec_right .hot a:hover { color: #ff6600; }
+
+main { width: 100%; font-size: 14px; }
 
 main > nav { padding: 0 30px; height: 38px; background-color: #90c31f; line-height: 38px; display: flex; }
 
@@ -34,11 +68,11 @@ main > section .banner ul li { display: inline-block; float: left; }
 
 main > section .download { flex: 1; border: 1px solid #fff; }
 
-main > aside { position: fixed; right: -30px; bottom: 100px; border: 1px solid #ccc; }
+main > aside { position: fixed; right: 0px; bottom: 100px; border: 1px solid #ccc; }
 
 main > aside ul { padding: 5px; background-color: #FFF; }
 
-main > aside ul li { text-align: center; border-bottom: 1px solid #f00; }
+main > aside ul li { text-align: center; padding: 5px; border-bottom: 1px solid #f00; }
 
 main > aside ul li a { margin-left: 15px; }
 

@@ -1,0 +1,21 @@
+body { background-color: #F0F0F0; }
+
+body > nav { margin: 50px 0 50px 200px; }
+
+body > nav span { font-size: 18px; margin-left: 30px; }
+
+body > main { width: 990px; margin: 0 auto; color: #666666; font-size: 12px; }
+
+body > main a { color: #6c9d03; font-size: 12px; }
+
+body > main a:hover { color: #ff6600; }
+
+body > main .tips { text-align: right; margin-bottom: 10px; }
+
+body > main .tips span { margin-left: 5px; }
+
+body > main .loginPage { background-color: #FFF; width: 100%; border: 1px solid #ccc; padding: 50px 0; overflow: hidden; }
+
+body > main .loginPage .loginpic { float: right; }
+
+body > main .loginPage .loginpic img { border-left: 1px solid #ccc; }

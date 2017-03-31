@@ -1,7 +1,9 @@
 requirejs.config({
-	baseUrl:'js',
+	//baseUrl:'js',
 	paths:{
-		'jquery':'jquery.min'
+		'jquery':'jquery-3.1.1',
+		'login':'../js/login',
 	}
+	
 	 
 })

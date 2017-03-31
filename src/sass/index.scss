@@ -1,7 +1,68 @@
 @import 'var';
 
+nav{
+	width: 100%;
+	font-size:12px;
+	.second{
+		padding: 30px 30px;
+		display:flex;
+		
+		color:$fcolor;
+		.logo{
+			flex:3;
+			a{margin-left: 20px;display: block;width: 196px;height: 56px;background: url('../img/index_logo.gif')}
+		}
+		.baozhang{
+			flex:2;
+			ul{
+				li{
+					float: left;
+					text-align:center;
+					padding: 0 10px;
+					span{display:block;}
+					border-right: 1px dashed #ccc;
+					&:last-child{
+						border-right:0; 	
+					}
+				}
+				
+			}
+			
+		}
+		.sec_right{
+			flex:2;
+			.search{
+				border: 2px solid $bgc;
+				height: 30px;
+				position: relative;
+				display:flex;
+
+
+				span{position: absolute;top: 5px;left: 3px;flex:1;}
+				input{
+					margin: 3px 0;
+					flex:8;
+					border: 0;
+					margin-left: 24px;
+					border-left: 1px solid #ddd;
+					&:focus{
+						outline:none;
+					}
+				}
+				button{flex:2;height: 100%;background-color: #90c31f;border: 0;color:#fff;font-size:14px;font-weight:600;}
+			}
+			.hot{
+				a{
+					color:$fcolor;
+					&:hover{color:$hcolor;}
+				}
+				line-height: 26px;
+			}
+			
+		}
+	}
+}
 main{
-	padding-bottom: 1000px;
 	width: 100%;
 	font-size:14px;
 	&>nav{
@@ -66,7 +127,7 @@ main{
 	}
 	&>aside{
 		position: fixed;
-		right: -30px;
+		right: 0px;
 		bottom:100px;
 		border: 1px solid #ccc;
 		ul{
@@ -74,6 +135,7 @@ main{
 			background-color: #FFF;
 			li{	
 				text-align:center;
+				padding: 5px;
 				border-bottom: 1px solid #f00;
 				a{margin-left: 15px;}
 				span{

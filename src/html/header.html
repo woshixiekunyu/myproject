@@ -1,124 +1,33 @@
-header{
-	width: 100%;
-	font-size:12px;
-	.nav{
-		background-color: #f2f2f2;
-		border-bottom: 1px solid #ccc;
-		line-height: 26px;
-		height: 26px;
-		padding: 0 30px;
-		display:flex;
-		a{color:$fcolor;
-			&:hover{color:$hcolor;}
-		}
-		.nav_left{
-			width: 45%;
-			display:flex;
-			.collect{
-				display:flex;
-				span{margin: 6px;}
-				a{margin-right: 20px}
-				
-			}
-			.welcome{
-				margin-left: 6px
-			}
-		}
-		.nav_right{
-			width: 55%;
-			display:flex;
-			span{
-				padding: 0 10px;
-
-				&:nth-child(2){
-					i{margin-left: 5px;}
-					
-					&:hover{background-color: #FFF;border-left: 1px solid #ccc;border-right: 1px solid #ccc;border-bottom: 1px solid #ccc;}
-				}
-
-				&:nth-child(3){
-					position: relative;
-					height: 14px;
-					
-					a{margin-top: 0;}
-					i{margin-left: 5px;}
-				}
-				&:nth-child(4){
-					display:flex;
-					margin-left: -10px;
-					i{margin-right: 5px; margin-top: 5px;}
-
-				}
-				&:nth-child(5){
-					display:flex;
-					border-left: 1px solid #ccc;
-					i{margin-right: 5px; margin-top: 5px;}
-				}
-				&:last-child{
-					display:flex;
-					a{color:$hcolor;}
-					i{margin-right: 5px; margin-top: 5px;}
-				}
-			}
-		}
-	}
-	.second{
-		padding: 0 30px;
-		display:flex;
-		padding-top: 30px;
-		color:$fcolor;
-		.logo{
-			flex:3;
-			a{margin-left: 20px;display: block;width: 196px;height: 56px;background: url('../img/index_logo.gif')}
-		}
-		.baozhang{
-			flex:2;
-			ul{
-				li{
-					float: left;
-					text-align:center;
-					padding: 0 10px;
-					span{display:block;}
-					border-right: 1px dashed #ccc;
-					&:last-child{
-						border-right:0; 	
-					}
-				}
-				
-			}
+		<div class="nav">
+			<div class="nav_left">
+				<div class="collect">
+					<span class="icon icon_wujiao"></span>
+					<a href="#">收藏可得网</a>
+				</div>
+				<div class="welcome">
+					<span></span>
+					<a href="login.html" id="login">登录</a>
+					<a href="sign.html" class="sign">[免费注册]</a>
+				</div>
+			</div>
 			
-		}
-		.sec_right{
-			flex:2;
-			.search{
-				border: 2px solid #90c31f;
-				height: 30px;
-				position: relative;
-				display:flex;
+			<div class="nav_right">
+				<span><a href="#">我的礼券</a></span>
+				<span><a href="#">我的可得</a><i class="icon icon_xiajiantou"></i>
+				<!-- <ul>
+					<li><a href="#">我的订单</a></li>
+					<li><a href="#">我的收藏</a></li>
+					<li><a href="#">积分兑换</a></li>
+					<li><a href="#">我的验光单</a></li>
+				</ul> -->
+				</span>
 
-
-				span{position: absolute;top: 5px;left: 3px;flex:1;}
-				input{
-					margin: 3px 0;
-					flex:8;
-					border: 0;
-					margin-left: 24px;
-					border-left: 1px solid #ddd;
-					&:focus{
-						outline:none;
-					}
-				}
-				button{flex:2;height: 100%;background-color: #90c31f;border: 0;color:#fff;font-size:14px;font-weight:600;}
-			}
-			.hot{
-				a{
-					color:$fcolor;
-					&:hover{color:$hcolor;}
-				}
-				line-height: 26px;
-			}
+				
+				<span><a href="#">帮助中心<i class="icon icon_xiajiantou"></i></a></span>
+				<span><i class="icon icon_car"></i><a href="#">购物车 <b></b>件</a></span>
+				<span><i class="icon icon_phone"></i>手机版</span>
+				<span><i class="icon icon_qq"></i><a href="#">客服电话：4006-20-20-20 ( 9:00-23:45 )</a></span>
+			</div>
 			
-		}
-	}
-
-}
+		</div>
+		

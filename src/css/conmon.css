@@ -1,4 +1,4 @@
-body, h1, h2, h3, h4, h5, h6, ul, li { margin: 0; padding: 0; }
+body, h1, h2, h3, h4, h5, h6, ul, li, p { margin: 0; padding: 0; }
 
 a { text-decoration: none; }
 
@@ -49,38 +49,6 @@ header .nav .nav_right span:last-child { display: flex; }
 header .nav .nav_right span:last-child a { color: #ff6600; }
 
 header .nav .nav_right span:last-child i { margin-right: 5px; margin-top: 5px; }
-
-header .second { padding: 30px 30px; display: flex; color: #666666; }
-
-header .second .logo { flex: 3; }
-
-header .second .logo a { margin-left: 20px; display: block; width: 196px; height: 56px; background: url("../img/index_logo.gif"); }
-
-header .second .baozhang { flex: 2; }
-
-header .second .baozhang ul li { float: left; text-align: center; padding: 0 10px; border-right: 1px dashed #ccc; }
-
-header .second .baozhang ul li span { display: block; }
-
-header .second .baozhang ul li:last-child { border-right: 0; }
-
-header .second .sec_right { flex: 2; }
-
-header .second .sec_right .search { border: 2px solid #90c31f; height: 30px; position: relative; display: flex; }
-
-header .second .sec_right .search span { position: absolute; top: 5px; left: 3px; flex: 1; }
-
-header .second .sec_right .search input { margin: 3px 0; flex: 8; border: 0; margin-left: 24px; border-left: 1px solid #ddd; }
-
-header .second .sec_right .search input:focus { outline: none; }
-
-header .second .sec_right .search button { flex: 2; height: 100%; background-color: #90c31f; border: 0; color: #fff; font-size: 14px; font-weight: 600; }
-
-header .second .sec_right .hot { line-height: 26px; }
-
-header .second .sec_right .hot a { color: #666666; }
-
-header .second .sec_right .hot a:hover { color: #ff6600; }
 
 .icon { background: url(../img/img.png) no-repeat; display: inline-block; }
 

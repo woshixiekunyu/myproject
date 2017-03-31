@@ -1,0 +1,38 @@
+@import 'var';
+
+body{
+	background-color:#F0F0F0;
+	&>nav{
+		margin: 50px 0 50px 200px;
+		span{
+			font-size:18px;
+			margin-left: 30px;
+		}
+	}
+	&>main{
+		width: 990px;
+		margin: 0 auto;
+		color:$fcolor;
+		font-size:12px;
+		a{
+			color:#6c9d03;font-size:12px;
+			&:hover{color:$hcolor;}
+		}
+		.tips{
+			text-align:right;
+			margin-bottom: 10px;
+			span{margin-left: 5px;}
+		}
+		.loginPage{
+			background-color: #FFF;
+			width: 100%;
+			border: 1px solid #ccc;
+			padding: 50px 0;
+			overflow: hidden;
+			.loginpic{
+				float: right;
+				img{border-left: 1px solid #ccc;}
+			}
+		}
+	}
+}

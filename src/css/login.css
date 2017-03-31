@@ -1,0 +1,53 @@
+body { background-color: #F0F0F0; }
+
+body > nav { margin: 50px 0 50px 200px; }
+
+body > nav span { font-size: 18px; margin-left: 30px; }
+
+body > main { width: 990px; margin: 0 auto; color: #666666; font-size: 12px; }
+
+body > main a { color: #6c9d03; font-size: 12px; }
+
+body > main a:hover { color: #ff6600; }
+
+body > main .tips { text-align: right; margin-bottom: 10px; }
+
+body > main .tips span { margin-left: 5px; }
+
+body > main .loginPage { background-color: #FFF; width: 100%; border: 1px solid #ccc; padding: 50px 0; display: flex; }
+
+body > main .loginPage .loginpic img { border-right: 1px solid #ccc; }
+
+body > main .loginPage .loginInput { padding: 0 50px; }
+
+body > main .loginPage .loginInput .username, body > main .loginPage .loginInput .password { padding-left: 5px; padding-top: 5px; width: 300px; height: 30px; border: 1px solid #ccc; margin-bottom: 30px; }
+
+body > main .loginPage .loginInput #username, body > main .loginPage .loginInput #password { float: right; width: 265px; height: 25px; border: 0; }
+
+body > main .loginPage .loginInput #username:focus, body > main .loginPage .loginInput #password:focus { outline: none; }
+
+body > main .loginPage .loginInput .check { font-size: 16px; }
+
+body > main .loginPage .loginInput .check a { float: right; }
+
+body > main .loginPage .loginInput .btnlogin { cursor: pointer; margin-top: 5px; color: #fff; text-align: center; width: 300px; border: 1px solid #ccc; height: 30px; line-height: 30px; background-color: #f60; }
+
+body > main .loginPage .loginInput .btnlogin:hover { background-color: #f80; }
+
+body > main .loginPage .loginInput .otherLogin { line-height: 22px; }
+
+body > main .loginPage .loginInput .otherLogin .con a { margin-left: 20px; }
+
+body > main .loginPage .loginInput .otherLogin .con a:nth-child(1) { margin-left: 0; }
+
+.login { background: url(../img/login.png) no-repeat; display: inline-block; }
+
+.login_user { height: 24px; width: 24px; background-position: 0 0; }
+
+.login_pas { height: 24px; width: 24px; background-position: 0 -24px; }
+
+.login_weibo { height: 32px; width: 32px; background-position: 0 -48px; }
+
+.login_pay { height: 32px; width: 32px; background-position: 0 -80px; }
+
+.login_qq { height: 32px; width: 32px; background-position: 0 -112px; }

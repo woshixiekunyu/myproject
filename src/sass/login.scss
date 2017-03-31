@@ -1,0 +1,95 @@
+@import 'var';
+
+body{
+	background-color:#F0F0F0;
+	&>nav{
+		margin: 50px 0 50px 200px;
+		span{
+			font-size:18px;
+			margin-left: 30px;
+		}
+	}
+	&>main{
+		width: 990px;
+		margin: 0 auto;
+		color:$fcolor;
+		font-size:12px;
+		a{
+			color:#6c9d03;font-size:12px;
+			&:hover{color:$hcolor;}
+		}
+		.tips{
+			text-align:right;
+			margin-bottom: 10px;
+			span{margin-left: 5px;}
+		}
+		.loginPage{
+			background-color: #FFF;
+			width: 100%;
+			border: 1px solid #ccc;
+			padding: 50px 0;
+			display:flex;
+			.loginpic{
+				img{border-right: 1px solid #ccc;}
+			}
+			.loginInput{
+				padding: 0 50px;
+				.username,.password{
+					padding-left: 5px;
+					padding-top: 5px;
+					width: 300px;
+					height: 30px;
+					border: 1px solid #ccc;
+					margin-bottom: 30px;
+				}
+				#username,#password{
+						float: right;
+						width: 265px;
+						height: 25px;
+						border: 0;
+
+						&:focus{
+							outline:none;
+						}
+				}
+				.check{
+					font-size:16px;
+					a{float: right}
+				}
+				.btnlogin{
+					cursor:pointer;
+					margin-top: 5px;
+					color:#fff;
+					text-align:center;
+					width: 300px;
+					border: 1px solid #ccc;
+					height: 30px;
+					line-height: 30px;
+					background-color: #f60;
+					&:hover{background-color: #f80;}
+				}
+				.otherLogin{
+					line-height: 22px;
+					.con{
+						a{
+							margin-left: 20px;
+							&:nth-child(1){margin-left: 0;}
+						}
+					}
+					
+				}
+
+			}
+		}
+		
+	}
+}
+
+
+
+.login{background:url(../img/login.png)  no-repeat;display:inline-block;}
+.login_user{height:24px;width:24px;background-position:0 0;}
+.login_pas{height:24px;width:24px;background-position:0 -24px;}
+.login_weibo{height:32px;width:32px;background-position:0 -48px;}
+.login_pay{height:32px;width:32px;background-position:0 -80px;}
+.login_qq{height:32px;width:32px;background-position:0 -112px;}
