@@ -1,6 +1,7 @@
 @import 'var';
 
 main{
+	padding-bottom: 1000px;
 	width: 100%;
 	font-size:14px;
 	&>nav{
@@ -46,11 +47,41 @@ main{
 		}
 		.banner{
 			width: 760px;
-			background-color: yellow;
+			overflow: hidden;
+			ul{
+				width:3800px;
+				height: 320px;
+				li{	
+					display:inline-block;
+					float: left;
+					// img{}
+				}
+			}
+			
 		}
 		.download{
 			flex:1;
-			background-color: blue;
+			border: 1px solid #fff;
 		}
+	}
+	&>aside{
+		position: fixed;
+		right: -30px;
+		bottom:100px;
+		border: 1px solid #ccc;
+		ul{
+			padding: 5px;
+			background-color: #FFF;
+			li{	
+				text-align:center;
+				border-bottom: 1px solid #f00;
+				a{margin-left: 15px;}
+				span{
+					font-size:12px;
+				}
+			}
+		}
+		
+		
 	}
 }

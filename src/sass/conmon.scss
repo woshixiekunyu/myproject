@@ -131,9 +131,6 @@ header{
 }
 
 //top
-
-
-
 .icon{background:url(../img/img.png)  no-repeat; display:inline-block;}
 .icon_xiajiantou{height:4px;width:7px;background-position:0 0;}
 .icon_phone{height:16px;width:11px;background-position:0 -4px;}
@@ -142,3 +139,11 @@ header{
 .icon_car{height:16px;width:16px;background-position:0 -47px;}
 .icon_qq{height:16px;width:16px;background-position:0 -63px;}
 .icon_search{height:18px;width:18px;background-position:0 -79px;}
+
+//aside
+.aside{background:url(../img/aside.png)  no-repeat;display:block;}
+.aside_qq{height:34px;width:29px;background-position:0 0;}
+.aside_totop{height:28px;width:29px;background-position:0 -34px;}
+.aside_yanguang{height:32px;width:32px;background-position:0 -62px;}
+.aside_wechat{height:32px;width:32px;background-position:0 -94px;}
+.aside_erweima{height:32px;width:32px;background-position:0 -126px;}

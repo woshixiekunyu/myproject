@@ -97,3 +97,15 @@ header .second .sec_right .hot a:hover { color: #ff6600; }
 .icon_qq { height: 16px; width: 16px; background-position: 0 -63px; }
 
 .icon_search { height: 18px; width: 18px; background-position: 0 -79px; }
+
+.aside { background: url(../img/aside.png) no-repeat; display: block; }
+
+.aside_qq { height: 34px; width: 29px; background-position: 0 0; }
+
+.aside_totop { height: 28px; width: 29px; background-position: 0 -34px; }
+
+.aside_yanguang { height: 32px; width: 32px; background-position: 0 -62px; }
+
+.aside_wechat { height: 32px; width: 32px; background-position: 0 -94px; }
+
+.aside_erweima { height: 32px; width: 32px; background-position: 0 -126px; }
