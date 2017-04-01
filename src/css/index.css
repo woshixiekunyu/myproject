@@ -1,4 +1,4 @@
-nav { width: 100%; font-size: 12px; }
+nav { font-size: 12px; }
 
 nav .second { padding: 30px 30px; display: flex; color: #666666; }
 
@@ -52,23 +52,53 @@ main > nav ul li a { color: #fff; }
 
 main > section { padding: 0 30px; display: flex; height: 320px; }
 
-main > section aside { width: 216px; }
+main > section aside { width: 216px; background-color: #FFF; }
 
-main > section aside ul { padding: 0 10px; }
+main > section aside a { font-size: 12px; color: #666666; }
 
-main > section aside ul li { line-height: 45px; text-align: center; border-bottom: 1px dashed #ccc; }
+main > section aside > ul { padding: 0 10px; }
 
-main > section aside ul li span { float: right; margin-right: 20px; }
+main > section aside > ul > li { position: relative; line-height: 45px; text-align: center; border-bottom: 1px dashed #ccc; }
 
-main > section .banner { width: 760px; overflow: hidden; }
+main > section aside > ul > li > span { float: right; margin-right: 20px; }
 
-main > section .banner ul { width: 3800px; height: 320px; }
+main > section aside > ul > li .content { display: flex; position: absolute; left: 200px; top: 0; z-index: 1000; width: 762px; }
+
+main > section aside > ul > li .content ul { flex: 3; }
+
+main > section aside > ul > li .content ul li { display: flex; }
+
+main > section aside > ul > li .content ul li span { flex: 1; text-align: center; }
+
+main > section aside > ul > li .content ul li .link { border-bottom: 1px dashed #0f0; flex: 8; }
+
+main > section aside > ul > li .content ul li .link a { border-left: 1px solid #f00; padding-left: 3px; }
+
+main > section aside > ul > li .content .pic { flex: 2; }
+
+main > section .banner { width: 760px; overflow: hidden; position: relative; }
+
+main > section .banner ul { width: 4560px; height: 320px; position: relative; left: 0; top: 0; }
 
 main > section .banner ul li { display: inline-block; float: left; }
 
-main > section .download { flex: 1; border: 1px solid #fff; }
+main > section .banner .prev_nextbtn { display: none; }
 
-main > aside { position: fixed; right: 0px; bottom: 100px; border: 1px solid #ccc; }
+main > section .banner .prev { position: absolute; left: 0; top: 50%; margin-top: -23px; }
+
+main > section .banner .next { position: absolute; right: 0; top: 50%; margin-top: -23px; }
+
+main > section .banner .page { position: absolute; margin-left: -80px; bottom: 20px; left: 50%; }
+
+main > section .banner .page span { margin-right: 20px; border: 1px solid #ccc; border-radius: 50%; width: 10px; height: 10px; background-color: #ddd; display: inline-block; text-indent: -11999px; cursor: pointer; }
+
+main > section .banner .page span.active { background-color: #90c31f; }
+
+main > section .download { flex: 1; }
+
+main > section .download img { border: 1px solid #fff; }
+
+main > aside { position: fixed; display: none; right: 0px; bottom: 100px; border: 1px solid #ccc; }
 
 main > aside ul { padding: 5px; background-color: #FFF; }
 

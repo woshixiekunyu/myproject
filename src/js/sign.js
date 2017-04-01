@@ -1,6 +1,7 @@
 requirejs(['config'],function(){
 	requirejs(['jquery'],function(){
-		console.log($('header'))
-		$('header').load('../html/header.html')
+		$('header').load('../html/header.html',function(){
+			$('.welcome span').html('您好，欢迎光临可得眼镜网！')
+		})
 	})
 })

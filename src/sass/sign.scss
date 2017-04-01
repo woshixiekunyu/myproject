@@ -33,6 +33,53 @@ body{
 				float: right;
 				img{border-left: 1px solid #ccc;}
 			}
+			.loginInput{
+				float: left;
+				padding: 0 70px;
+				font-size:16px;
+				color:#333;
+				i{color:red;margin-right: 5px;}
+				p{
+					margin-bottom: 20px;
+					&:first-child{margin-left: 16px;}
+
+				}
+				.same{
+					height: 25px;
+					width: 250px;
+				}
+				
+					
+				.slideArea{
+					margin-bottom: 20px;
+					display:flex;
+					.slidearea{
+						margin-left: 5px;
+						width: 254px;
+						height: 30px;
+						border: 1px solid #ccc;
+						position: relative;
+						margin-top: -5px;
+						background-color: #ddd;
+						span{position: absolute;left: 10;top: 0;line-height: 30px;display:inline-block;width: 40px;height: 30px;border-right: 1px solid #ccc;background-color: #fff;text-align:center;}
+					}
+				}
+				.Code{
+					margin-left: 16px;
+					display:flex;
+					#code{
+						height: 25px;
+						width: 100px;
+						margin-left: 3px;
+					}
+					.codeshow{display:inline-block;width: 80px;height: 30px;border: 1px solid #ccc;margin-left: 10px;}
+				}
+				.refer{
+					background-color: #ccc;width: 250px;height: 30px;line-height: 30px;text-align:center;color:#fff;margin-left: 87px;cursor:pointer;
+				}
+				.agree{margin-left: 87px;margin-top: 5px;}
+
+			}
 		}
 	}
 }

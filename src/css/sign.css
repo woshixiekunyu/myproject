@@ -19,3 +19,29 @@ body > main .loginPage { background-color: #FFF; width: 100%; border: 1px solid 
 body > main .loginPage .loginpic { float: right; }
 
 body > main .loginPage .loginpic img { border-left: 1px solid #ccc; }
+
+body > main .loginPage .loginInput { float: left; padding: 0 70px; font-size: 16px; color: #333; }
+
+body > main .loginPage .loginInput i { color: red; margin-right: 5px; }
+
+body > main .loginPage .loginInput p { margin-bottom: 20px; }
+
+body > main .loginPage .loginInput p:first-child { margin-left: 16px; }
+
+body > main .loginPage .loginInput .same { height: 25px; width: 250px; }
+
+body > main .loginPage .loginInput .slideArea { margin-bottom: 20px; display: flex; }
+
+body > main .loginPage .loginInput .slideArea .slidearea { margin-left: 5px; width: 254px; height: 30px; border: 1px solid #ccc; position: relative; margin-top: -5px; background-color: #ddd; }
+
+body > main .loginPage .loginInput .slideArea .slidearea span { position: absolute; left: 10; top: 0; line-height: 30px; display: inline-block; width: 40px; height: 30px; border-right: 1px solid #ccc; background-color: #fff; text-align: center; }
+
+body > main .loginPage .loginInput .Code { margin-left: 16px; display: flex; }
+
+body > main .loginPage .loginInput .Code #code { height: 25px; width: 100px; margin-left: 3px; }
+
+body > main .loginPage .loginInput .Code .codeshow { display: inline-block; width: 80px; height: 30px; border: 1px solid #ccc; margin-left: 10px; }
+
+body > main .loginPage .loginInput .refer { background-color: #ccc; width: 250px; height: 30px; line-height: 30px; text-align: center; color: #fff; margin-left: 87px; cursor: pointer; }
+
+body > main .loginPage .loginInput .agree { margin-left: 87px; margin-top: 5px; }
