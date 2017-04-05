@@ -36,9 +36,9 @@ main { width: 100%; font-size: 14px; }
 
 main > nav { padding: 0 30px; height: 38px; background-color: #90c31f; line-height: 38px; display: flex; }
 
-main > nav .goodslist { width: 216px; text-align: center; background-color: #6d9d03; color: #fff; }
+main > nav .goodslists { width: 216px; text-align: center; background-color: #6d9d03; color: #fff; }
 
-main > nav .goodslist i { margin-left: 15px; }
+main > nav .goodslists i { margin-left: 15px; }
 
 main > nav ul { flex: 8.2; display: flex; }
 
@@ -56,25 +56,31 @@ main > section aside { width: 216px; background-color: #FFF; }
 
 main > section aside a { font-size: 12px; color: #666666; }
 
-main > section aside > ul { padding: 0 10px; }
+main > section aside > ul { position: relative; }
 
-main > section aside > ul > li { position: relative; line-height: 45px; text-align: center; border-bottom: 1px dashed #ccc; }
+main > section aside > ul > li { padding: 0 10px; line-height: 45px; }
 
-main > section aside > ul > li > span { float: right; margin-right: 20px; }
+main > section aside > ul > li:last-child { height: 44px; }
 
-main > section aside > ul > li .content { display: flex; position: absolute; left: 200px; top: 0; z-index: 1000; width: 762px; }
+main > section aside > ul > li > h3 { padding: 0 20px; border-bottom: 1px dashed #ccc; font-size: 16px; height: 45px; }
 
-main > section aside > ul > li .content ul { flex: 3; }
+main > section aside > ul > li > h3 a { font-size: 12px; display: inline-block; height: 45px; width: 100%; }
 
-main > section aside > ul > li .content ul li { display: flex; }
+main > section aside > ul > li > h3 a span { margin-right: 10px; }
 
-main > section aside > ul > li .content ul li span { flex: 1; text-align: center; }
+main > section aside > ul > li > h3 a i { float: right; }
 
-main > section aside > ul > li .content ul li .link { border-bottom: 1px dashed #0f0; flex: 8; }
+main > section aside > ul > li .content { position: absolute; left: 216px; top: 0; z-index: 1000; padding-left: 30px; width: 730px; height: 320px; display: flex; background-color: #FFF; border-bottom: 1px solid #6d9d03; border-right: 1px solid #6d9d03; }
 
-main > section aside > ul > li .content ul li .link a { border-left: 1px solid #f00; padding-left: 3px; }
+main > section aside > ul > li .content > ul { flex: 6.5; }
 
-main > section aside > ul > li .content .pic { flex: 2; }
+main > section aside > ul > li .content > ul > li { text-align: left; display: flex; padding: 8px 0; border-bottom: 1px dashed #ccc; }
+
+main > section aside > ul > li .content > ul > li .link { text-align: left; flex: 8; margin-left: 10px; display: flex; flex-wrap: wrap; line-height: 12px; }
+
+main > section aside > ul > li .content > ul > li .link a { margin-top: 5px; display: inline-block; padding: 0 5px; border-left: 1px solid #ccc; height: 12px; }
+
+main > section aside > ul > li .content .pic { flex: 3.5; }
 
 main > section .banner { width: 760px; overflow: hidden; position: relative; }
 
@@ -90,7 +96,7 @@ main > section .banner .next { position: absolute; right: 0; top: 50%; margin-to
 
 main > section .banner .page { position: absolute; margin-left: -80px; bottom: 20px; left: 50%; }
 
-main > section .banner .page span { margin-right: 20px; border: 1px solid #ccc; border-radius: 50%; width: 10px; height: 10px; background-color: #ddd; display: inline-block; text-indent: -11999px; cursor: pointer; }
+main > section .banner .page span { margin-right: 20px; border: 1px solid #ccc; border-radius: 50%; width: 20px; height: 20px; text-align: center; line-height: 20px; background-color: #666; display: inline-block; cursor: pointer; }
 
 main > section .banner .page span.active { background-color: #90c31f; }
 
@@ -98,11 +104,11 @@ main > section .download { flex: 1; }
 
 main > section .download img { border: 1px solid #fff; }
 
-main > aside { position: fixed; display: none; right: 0px; bottom: 100px; border: 1px solid #ccc; }
+main > aside { position: fixed; right: -30px; bottom: 60px; border: 1px solid #ccc; }
 
 main > aside ul { padding: 5px; background-color: #FFF; }
 
-main > aside ul li { text-align: center; padding: 5px; border-bottom: 1px solid #f00; }
+main > aside ul li { text-align: center; padding: 10px 5px; border-bottom: 1px solid #f00; }
 
 main > aside ul li a { margin-left: 15px; }
 

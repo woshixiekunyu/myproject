@@ -104,7 +104,19 @@ requirejs(['config'],function(){
 		var p1 = new Lunbo({ele:$('.banner ul'),isBanner:true});
 		p1.init();
 
-		$('main section aside').on('mouseenter','li',function(){
+		var $list = $('main section aside');
+		$list.children().children('li').children('.content').hide();
+		$list.on('mouseenter','>ul>li',function(){
+
+			for(var i=0;i<$list.children().children('li').length;i++){
+				$(this).siblings().removeClass('border').addClass('bdr');
+			}
+			$(this).children('.content').show();
+			$(this).removeClass('bdr').addClass('border').children('h3').children('a').children('i').hide();
+		}).on('mouseleave','li',function(){
+			$(this).children('.content').hide();
+			$(this).removeClass('border').children('h3').children('a').children('i').show();
+			$(this).siblings().removeClass('bdr')
 			
 		})
 	})

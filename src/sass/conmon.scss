@@ -1,8 +1,18 @@
 @import 'var';
 body,h1,h2,h3,h4,h5,h6,ul,li,p{margin: 0;padding:0}
 a{text-decoration:none;}
+i{font-style:normal;}
 ul{list-style:none;}
-
+	
+	.border{
+		border:1px solid #6d9d03;
+		border-right: 0;
+		border-top: 0;
+		
+	}
+	.bdr{
+		border-right: 1px solid #6d9d03;
+	}
 //header
 //
 header{
@@ -94,3 +104,13 @@ header{
 .prev_nextbtn{background: url('../img/next&prevbtn.png') no-repeat;}
 .prev{height:47px;width: 21px;background-position: 0 0;}
 .next{height:47px;width: 21px;background-position: -738px 0;}
+
+//.index_goodlist
+.goodlist{background:url(../img/goodlist.png)  no-repeat; display:inline-block;}
+.goodlist_goodlist1{height:20px;width:15px;background-position:0 0;}
+.goodlist_goodlist3{height:21px;width:16px;background-position:0 -20px;}
+.goodlist_goodlist2{height:19px;width:18px;background-position:0 -41px;}
+.goodlist_goodlist6{height:11px;width:22px;background-position:0 -60px;}
+.goodlist_goodlist7{height:17px;width:22px;background-position:0 -71px;}
+.goodlist_goodlist4{height:16px;width:22px;background-position:0 -88px;}
+.goodlist_goodlist5{height:16px;width:22px;background-position:0 -104px;}
