@@ -119,6 +119,8 @@ requirejs(['config'],function(){
 			$(this).siblings().removeClass('bdr')
 			
 		})
+
+		
 	})
 		
 }) 

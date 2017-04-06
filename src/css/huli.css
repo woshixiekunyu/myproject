@@ -1,0 +1,65 @@
+main { font-size: 12px; color: #666666; }
+
+main > nav { height: 38px; padding: 0 30px; background-color: #90c31f; line-height: 38px; display: flex; color: #fff; }
+
+main > nav .goodslists { width: 216px; text-align: center; background-color: #6d9d03; position: relative; z-index: 10000; }
+
+main > nav .goodslists > i { margin-left: 15px; }
+
+main > nav .goodslists ul { color: #666; background-color: #FFF; }
+
+main > nav .goodslists ul a { color: #666666; }
+
+main > nav .goodslists ul > li { padding: 0 10px; line-height: 45px; }
+
+main > nav .goodslists ul > li:last-child { height: 44px; }
+
+main > nav .goodslists ul > li:hover h3 { border-bottom: 0; }
+
+main > nav .goodslists ul > li > h3 { padding: 0 20px; border-bottom: 1px dashed #ccc; font-size: 16px; height: 45px; }
+
+main > nav .goodslists ul > li > h3 a { font-size: 12px; display: inline-block; height: 45px; width: 100%; }
+
+main > nav .goodslists ul > li > h3 a span { margin-right: 10px; }
+
+main > nav .goodslists ul > li > h3 a i { float: right; }
+
+main > nav .goodslists ul > li .content { z-index: 10000; position: absolute; width: 730px; height: 320px; display: flex; background-color: #FFF; border-bottom: 1px solid #6d9d03; border-right: 1px solid #6d9d03; }
+
+main > nav .goodslists ul > li .content > ul { border-right: 1px solid #ccc; flex: 7; }
+
+main > nav .goodslists ul > li .content > ul > li { padding: 8px 0; display: flex; }
+
+main > nav .goodslists ul > li .content > ul > li span { margin-left: 20px; }
+
+main > nav .goodslists ul > li .content > ul > li .link { margin-left: 10px; flex: 8; display: flex; line-height: 12px; flex-wrap: wrap; border-bottom: 1px dashed #ccc; padding-bottom: 10px; }
+
+main > nav .goodslists ul > li .content > ul > li .link a { margin-top: 5px; display: inline-block; padding: 0 5px; border-left: 1px solid #ccc; }
+
+main > nav .goodslists ul > li .content .pic { flex: 3; z-index: 1000; }
+
+main > nav > ul { flex: 1; display: flex; }
+
+main > nav > ul li { width: 11%; text-align: center; }
+
+main > nav > ul li:nth-child(4) { background-color: #77b001; }
+
+main > nav > ul li:hover { background-color: #77b001; }
+
+main > nav > ul li a { color: #fff; }
+
+main section { padding: 15px 30px; }
+
+main section a { color: #666666; }
+
+main section a:hover { color: #ff6600; }
+
+main > aside { position: fixed; right: -30px; bottom: 60px; border: 1px solid #ccc; }
+
+main > aside ul { padding: 5px; background-color: #FFF; }
+
+main > aside ul li { text-align: center; padding: 10px 5px; border-bottom: 1px solid #f00; }
+
+main > aside ul li a { margin-left: 15px; }
+
+main > aside ul li span { font-size: 12px; }

@@ -43,7 +43,89 @@ requirejs(['config'],function(){
 						console.log($(this).children('ul'))
 						$(this).children('ul').hide();
 					})
+
+
+					// 轮播图
+					function lunbo(opt){
+						this.$list = opt.ele;
+						this.$a = this.$list.children();
+						this.$img = this.$list.children().children();
+						this.$len = this.$list.children('a').length;
+						this.$idx = 1;
+					}
+					lunbo.prototype= {
+						constructor:lunbo,
+
+						init:function(){
+
+							var $div = $('<div/>').addClass('page');
+							for(var i=0;i<this.$len;i++){
+								var $page = $('<span/>').html(i+1).appendTo($div);
+								console.log(i)
+							}
+							this.$list.append($div)
+							$div.children()[0].classList.add('active');
+							this.timer = setInterval((this.move).bind(this),3000)
+
+
+							//点击前后按钮
+							$('.prev').on('click',function(){
+								this.$idx--;
+								setInterval((this.show).bind(this),500)
+							}.bind(this))
+							$('.next').on('click',function(){
+								this.$idx++;
+								setInterval((this.show).bind(this),500)
+							}.bind(this))
+
+							this.$list.on('mouseenter',function(){
+								clearInterval(this.timer);
+								$('.prev').show();
+								$('.next').show();
+							}.bind(this)).on('mouseleave',function(){
+								this.timer = setInterval((this.move).bind(this),1000);
+								$('.prev').hide();
+								$('.next').hide();
+							}.bind(this))
+
+							$div[0].onmouseover = function(e){
+								if(e.target.tagName.toLowerCase() ==='span'){
+									this.$idx = e.target.innerText;
+									this.show();
+								}
+							}.bind(this)
+
+							this.$div = $div;
+
+
+						},
+						move:function(){
+							this.$idx++;
+							this.show();
+						},
+						show:function(){
+							if(this.$idx>this.$len){
+								this.$idx=1;
+							}else if(this.$idx<1){
+								this.$idx = this.$len
+							}
+
+							for(var i=0;i<this.$div.children().length;i++){
+								this.$div.children()[i].classList.remove('active');
+
+							}
+							this.$div.children()[this.$idx-1].classList.add('active');
+							console.log(this.$idx)
+							this.$img.attr('src','../img/caitong_banner'+this.$idx+'.jpg') 
+						}
+						
+					}
 					
+					var l1 = new lunbo({ele:$('.banner')});
+					l1.init();
+					
+
+					$('footer').load('../html/footer.html')
 			});
 
 			

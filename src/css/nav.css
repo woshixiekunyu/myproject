@@ -26,8 +26,8 @@ nav .second .sec_right .search input:focus { outline: none; }
 
 nav .second .sec_right .search button { flex: 2; height: 100%; background-color: #90c31f; border: 0; color: #fff; font-size: 14px; font-weight: 600; }
 
-nav .second .sec_right .hot { line-height: 26px; }
+nav .second .sec_right .hotsearch { line-height: 26px; }
 
-nav .second .sec_right .hot a { color: #666666; }
+nav .second .sec_right .hotsearch a { color: #666666; }
 
-nav .second .sec_right .hot a:hover { color: #ff6600; }
+nav .second .sec_right .hotsearch a:hover { color: #ff6600; }

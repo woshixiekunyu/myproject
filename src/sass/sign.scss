@@ -61,7 +61,21 @@ body{
 						position: relative;
 						margin-top: -5px;
 						background-color: #ddd;
-						span{position: absolute;left: 10;top: 0;line-height: 30px;display:inline-block;width: 40px;height: 30px;border-right: 1px solid #ccc;background-color: #fff;text-align:center;}
+						text-align:center;
+						line-height: 30px;
+						span{color:#fff;display:none;}
+						.slide{
+							position: absolute;
+							left: 0;
+							top: 0;
+							line-height: 30px;
+							display:inline-block;
+							width: 40px;height: 30px;
+							border-right: 1px solid #ccc;
+							background-color: #fff;
+							text-align:center;
+							cursor:pointer;
+						}
 					}
 				}
 				.Code{
@@ -72,14 +86,23 @@ body{
 						width: 100px;
 						margin-left: 3px;
 					}
-					.codeshow{display:inline-block;width: 80px;height: 30px;border: 1px solid #ccc;margin-left: 10px;}
+					.codeshow{
+						display:inline-block;
+						width: 80px;
+						height: 30px;
+						border: 1px solid #ccc;
+						margin-left: 10px;
+						text-align:center;
+						line-height: 30px;
+					}
 				}
-				.refer{
+				#refer{
+
 					background-color: #ccc;width: 250px;height: 30px;line-height: 30px;text-align:center;color:#fff;margin-left: 87px;cursor:pointer;
 				}
 				.agree{margin-left: 87px;margin-top: 5px;}
-
 			}
 		}
 	}
+	
 }

@@ -2,7 +2,7 @@ main { width: 100%; font-size: 14px; }
 
 main > nav { height: 38px; padding: 0 30px; background-color: #90c31f; line-height: 38px; display: flex; }
 
-main > nav .goodslists { width: 216px; text-align: center; background-color: #6d9d03; color: #fff; position: relative; }
+main > nav .goodslists { width: 216px; text-align: center; background-color: #6d9d03; color: #fff; position: relative; z-index: 10000; }
 
 main > nav .goodslists > i { margin-left: 15px; }
 
@@ -24,7 +24,7 @@ main > nav .goodslists ul > li > h3 a span { margin-right: 10px; }
 
 main > nav .goodslists ul > li > h3 a i { float: right; }
 
-main > nav .goodslists ul > li .content { position: absolute; z-index: 1000; width: 730px; height: 320px; display: flex; background-color: #FFF; border-bottom: 1px solid #6d9d03; border-right: 1px solid #6d9d03; }
+main > nav .goodslists ul > li .content { z-index: 10000; position: absolute; width: 730px; height: 320px; display: flex; background-color: #FFF; border-bottom: 1px solid #6d9d03; border-right: 1px solid #6d9d03; }
 
 main > nav .goodslists ul > li .content > ul { border-right: 1px solid #ccc; flex: 7; }
 
@@ -48,8 +48,30 @@ main > nav > ul li:hover { background-color: #77b001; }
 
 main > nav > ul li a { color: #fff; }
 
-main .banner ul { width: 100%; height: 500px; overflow: hidden; display: flex; }
+main .banner { width: 100%; height: 500px; overflow: hidden; display: flex; position: relative; }
 
-main .banner ul li { position: relative; }
+main .banner a img { display: block; position: absolute; left: -300px; top: 0; z-index: -10000; }
 
-main .banner ul li a img { display: block; position: absolute; left: -250px; top: 0; }
+main .banner a:first-child img { z-index: -500; }
+
+main .banner .prev_nextbtn { display: none; }
+
+main .banner .prev { position: absolute; left: 5%; top: 70%; z-index: 1000; }
+
+main .banner .next { position: absolute; right: 5%; top: 70%; z-index: 1000; }
+
+main .banner .page { z-index: 1000; position: absolute; margin-left: -80px; bottom: 20px; left: 50%; }
+
+main .banner .page span { margin-right: 20px; border: 1px solid #ccc; border-radius: 50%; width: 20px; height: 20px; text-align: center; line-height: 20px; background-color: #666; display: inline-block; cursor: pointer; }
+
+main .banner .page span.active { background-color: #90c31f; }
+
+main > aside { position: fixed; right: -30px; bottom: 60px; border: 1px solid #ccc; }
+
+main > aside ul { padding: 5px; background-color: #FFF; }
+
+main > aside ul li { text-align: center; padding: 10px 5px; border-bottom: 1px solid #f00; }
+
+main > aside ul li a { margin-left: 15px; }
+
+main > aside ul li span { font-size: 12px; }

@@ -51,7 +51,7 @@ nav{
 				}
 				button{flex:2;height: 100%;background-color: #90c31f;border: 0;color:#fff;font-size:14px;font-weight:600;}
 			}
-			.hot{
+			.hotsearch{
 				a{
 					color:$fcolor;
 					&:hover{color:$hcolor;}
@@ -104,6 +104,7 @@ main{
 			&>ul{
 				position: relative;
 				&>li{
+					&:last-child{h3{border-bottom: 0;}}
 					padding: 0 10px;
 					line-height: 45px;
 					&:last-child{
@@ -229,4 +230,47 @@ main{
 		
 		
 	}
+}
+footer{
+	background-color: rgb(240, 240, 240);
+	text-align:center;
+	padding: 10px 50px 30px;
+	border-top: 1px solid #ddd;
+	box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15) inset;
+	color:$fcolor;
+	a{
+		color:#999;
+		&:hover{color:$hcolor;}
+	}
+	font-size:12px;
+	.Fx-01{
+		img{border-bottom: 1px solid #fff};
+	}
+	.Fx-02{
+		padding: 0 100px;
+		&>ul{
+			border-bottom: 1px solid #ddd;
+			padding: 30px 0;
+			display:flex;
+			&>li{
+				margin-left: 80px;
+				h3{
+					font-size:16px;
+					line-height: 50px;
+				}
+				ul{
+					li{line-height: 24px;}
+				}
+			}
+		}
+	}
+	.Fx-03{
+		padding-top: 20px;
+		border-top: 1px solid #fff;
+		p{
+			line-height: 20px;
+		}
+		a{line-height: 20px;}
+	}
+	.Fx-04{margin-top: 15px;}
 }
