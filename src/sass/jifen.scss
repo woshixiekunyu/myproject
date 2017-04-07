@@ -118,6 +118,9 @@ main{
 		.cub{
 			margin-right: 15px;
 			float: left;
+			color:#fff;
+			font-weight:500;
+			font-size:12px;
 			.cubtitle{
 				width: 234px;
 				height: 40px;
@@ -125,9 +128,18 @@ main{
 				border-bottom: 1px solid #fff;
 			}
 			.cubbody{
-				width: 234px;
-				height: 259px;
+				padding-top: 100px;
+				padding-left: 10px;
+				width: 224px;
+				height: 159px;
 				background: url('../img/loginbg.jpg') no-repeat;
+				span{
+					display: block;
+					line-height: 16px;
+				}
+				.btncub{color:#fff;display: block;width: 215px;height: 30px;background-color: #f90;font-size:16px;line-height: 30px;text-align:center;}
+				p{color:#f90;margin-top: 20px}
+				
 			}
 		}
 		.banner{

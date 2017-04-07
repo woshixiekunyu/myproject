@@ -114,11 +114,136 @@ main{
 		}
 	}
 	section{
-		padding: 15px 30px;
-		a{
-			color:$fcolor;
-			&:hover{color:$hcolor}
+		.nowpos{
+			padding: 15px 30px;
+			a{
+				color:$fcolor;
+				&:hover{color:$hcolor}
+			}
 		}
+		.goodlists{
+			ul{
+				margin-left: 260px;
+				display: flex;
+				flex-wrap:wrap;
+				li{
+					background-color: #FFF;
+					position: relative;
+					margin: 20px 20px 0 4px;
+					width: 218px;
+					border: 1px solid #ccc;
+					border-bottom: 0;
+					height: 350px;
+					z-index: 1;
+					a{
+						cursor:pointer;
+						color:$fcolor;
+						&:hover{color:$hcolor;}
+					}
+					&:hover{
+						height:382px;
+						z-index: 10;
+						margin:19px 19px -35px 3px;
+						border-width:2px;
+						border-bottom: 2px solid #ccc;
+					}
+					&:hover .collect{
+						display: block;
+					}
+					p{
+						&:nth-child(2){
+							color:#f90;
+							font-size:26px;
+							margin: 0 5px;
+							
+							i{font-size:12px;}
+						}
+						&:nth-child(4){
+							font-size:12px;
+							color:#333;
+							margin: 0 4px;
+							line-height: 30px;
+							border-bottom: 1px solid #ccc;
+						}
+						&:nth-child(5){
+							margin: 0;
+							font-size:12px;
+							display: flex;
+							height: 34px;
+							line-height: 34px;
+							padding-left: 4px;
+							border-bottom: 1px solid #ccc;
+							i{
+								display: inline-block;
+								width: 84px;
+								height: 15px;
+								margin-top: 8px;
+								margin-right: 3px;
+							}
+						}
+					}
+					&>a{
+						display: block;
+						font-size:12px;
+						line-height: 16px;
+						text-align:left;
+						&:nth-child(3){
+							height: 32px;
+							padding: 0 4px;
+							
+						}
+					}
+					.collect{
+						display: none;
+						position: absolute;
+						width: 213px;
+						height: 27px;
+						bottom:0;left: 0;
+						padding: 3px 0 0 5px;
+						span{
+							display: inline-block;
+							text-align:center;
+							line-height: 20px;
+							height: 20px;
+							border: 1px solid #ff6600;
+							border-radius:3px;
+							cursor:pointer;
+							&:first-child{
+								color:#fff;
+								width: 100px;
+								background-color: #ff6600;
+								margin-right: 30px;
+								i{	
+									margin-left: 5px;
+									width: 18px;
+									height: 18px;
+									display: inline-block;
+									background: url('../img/whitecar.png') no-repeat;
+									float: left;
+								}
+							}
+
+							&:last-child{
+								width: 70px;
+								color:#ff6600;
+								i{	
+									margin-left: 10px;
+									margin-top: 5px;
+									width: 14px;
+									height: 13px;
+									display: inline-block;
+									background: url('../img/kongxin.png') no-repeat;
+									float: left;
+								}
+							}
+						}
+						
+					}
+					
+				}
+			}
+		}
+		
 	}
 	&>aside{
 		position: fixed;

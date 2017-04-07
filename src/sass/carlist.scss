@@ -1,0 +1,9 @@
+body{
+	&>nav{
+		margin: 50px 0 50px 200px;
+		span{
+			font-size:18px;
+			margin-left: 30px;
+		}
+	}
+}

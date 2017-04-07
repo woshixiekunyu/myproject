@@ -50,11 +50,17 @@ main > nav > ul li a { color: #fff; }
 
 main section { padding: 5px 30px 15px; }
 
-main section .cub { margin-right: 15px; float: left; }
+main section .cub { margin-right: 15px; float: left; color: #fff; font-weight: 500; font-size: 12px; }
 
 main section .cub .cubtitle { width: 234px; height: 40px; background: url("../img/loginbgtop.jpg") no-repeat; border-bottom: 1px solid #fff; }
 
-main section .cub .cubbody { width: 234px; height: 259px; background: url("../img/loginbg.jpg") no-repeat; }
+main section .cub .cubbody { padding-top: 100px; padding-left: 10px; width: 224px; height: 159px; background: url("../img/loginbg.jpg") no-repeat; }
+
+main section .cub .cubbody span { display: block; line-height: 16px; }
+
+main section .cub .cubbody .btncub { color: #fff; display: block; width: 215px; height: 30px; background-color: #f90; font-size: 16px; line-height: 30px; text-align: center; }
+
+main section .cub .cubbody p { color: #f90; margin-top: 20px; }
 
 main section .banner { width: 945px; overflow: hidden; position: relative; }
 
