@@ -9,9 +9,9 @@ requirejs(['config'],function(){
 
 					var $listTop = $('main>nav').outerHeight();
 					var $listWid = $('main>nav .goodslists').outerWidth();
-					console.log($listWid)
+					// console.log($listWid)
 					// var $listLeft = $('main>nav>.goodslists').offset().left;
-					console.log($('main>nav .goodslists .content'))
+					// console.log($('main>nav .goodslists .content'))
 
 					$('main>nav .goodslists .content').css('top',$listTop);
 					$('main>nav .goodslists .content').css('left',$listWid);
@@ -55,7 +55,7 @@ requirejs(['config'],function(){
 							var cookiearr = cookie.split('; ');
 							console.log(cookiearr[0])
 							var res = Number(cookiearr[0].match(/\d/)[0]);
-							console.log(res)
+							// console.log(res)
 							for(var i=0;i<=data.length;i++){
 								if(i === res){
 									var bigimgarr =  data[i-1].bigimg.split('?');
@@ -69,7 +69,7 @@ requirejs(['config'],function(){
 									$('.control>p').html(data[i-1].decription);
 									var res = data[i-1].oldprice - data[i-1].price;
 									$('.discount>.price').html(`<span class="smalltip">促销价:</span><i>￥${data[i-1].price}</i><div class="tips"><b>已降${res}.00元</b></div><span>可得价：</span><i>￥${data[i-1].oldprice}</i><span>赠送积分：</span><i>${data[i-1].extra}积分</i>`);
-									$('.discount>.num').html(`<span>商品编号：</span><i>${data[i-1].number}</i><span>库存状况：</span><i>${data[i-1].kucun}</i>`);
+									$('.discount>.num').html(`<span>商品编号：</span><i id="goodsNum">${data[i-1].number}</i><span>库存状况：</span><i>${data[i-1].kucun}</i>`);
 									var infor = data[i-1].cuxiao;
 									var inforarr = infor.split('?');
 									for(var j=0;j<inforarr.length-1;j++){
@@ -85,11 +85,11 @@ requirejs(['config'],function(){
 
 									
 									var allimg = data[i-1].smallimg;
-									console.log(i)
+									// console.log(i)
 									var imgarr = allimg.split('?');
 									
 									$zoomlist[0].innerHTML = imgarr.map(function(item,idx){
-										console.log(item)
+										// console.log(item)
 										return `
 											<li>
 												<img src="${item}" data-id="${idx}"/>
@@ -110,7 +110,7 @@ requirejs(['config'],function(){
 									$zoomlist.on('mouseenter','li',function(){
 										$(this).addClass('imgborder').siblings().removeClass('imgborder');
 										var $index = $(this).children('img').attr('data-id');
-										console.log($index)
+										// console.log($index)
 										for(var i=0;i<$('.zoomimg>.img').children().length;i++){
 											$('.zoomimg>.img').children().hide();
 										}
@@ -130,7 +130,7 @@ requirejs(['config'],function(){
 									})
 									$zoomlist.parent().next().on('click',function(){
 										$idx++;
-										console.log($idx)
+										// console.log($idx)
 										if($idx>=0){
 											$idx=0;
 										}
@@ -161,7 +161,7 @@ requirejs(['config'],function(){
 
 									this.ele.on('mouseenter','img',function(){
 										var $idx = $(this).children().attr('data-id');
-										console.log($(this))
+										// console.log($(this))
 
 										//生成大图
 										
@@ -176,43 +176,56 @@ requirejs(['config'],function(){
 										
 
 										
-									}).on('mouseleave','img',function(){
+									}).on('mouseleave',function(){
 										// console.log(this)
 										$zoom.remove();
 										$bigbox.remove();
 										$bigbox.children().remove()
 										// this.remove();
+										// console.log(this.ele)
 									}.bind(this))
 
 									this.ele[0].onmousemove =function(e){
-										
-									// 	var left = e.clientX-this.offsetLeft-$zoom[0].offsetWidth/2;
-									// 	var top = e.clientY-this.offsetTop-$zoom[0].offsetHeight/2;
-									// 	if($($bigbox).children()[0]){
-											this.move()
-									// 		radian = this.offsetWidth/$($bigbox).children()[0].offsetWidth;
+										// console.log(this.ele.children()[0])
+										// console.log(this.ele[0].offsetLeft-$zoom.outerWidth()/2)
+										var left = e.pageX-this.ele[0].offsetLeft-$zoom.outerWidth()/2;
+										var top = e.pageY-this.ele[0].offsetTop-$zoom.outerHeight()/2;
+										if($bigbox.children()[0]){
+											radian = this.ele[0].offsetWidth/$($bigbox).children()[0].offsetWidth;
+											// console.log(radian)
+											// console.log(this.ele[0])
+											$zoom.css('width',$bigbox.outerWidth()*radian)
+											$zoom.css('height',$bigbox.outerHeight()*radian)
+											this.move(left,top,radian)
 
-									// 		$zoom.css('width',$($bigbox).outerWidth()*radian)
-									// 		$zoom.css('height',$($bigbox).outerHeight*radian)
-
-									// 	}
+										}	
 									}.bind(this)
 
 									this.$bigbox = $bigbox;
 									this.$zoom = $zoom;
 								},
-								move:function(){
-									// if(left<0){
-									// 	left=0;
-									// }else if(left >= this.smallImg.offsetLeft+this.smallImg.offsetWidth-this.zoom.offsetWidth){
-									// 	left = this.ele.offsetLeft+this.smallImg.offsetWidth-this.zoom.offsetWidth;
-									// }
-									// if(top<0){
-									// 	top=0;
-									// }else if(top >= this.smallImg.offsetTop+this.smallImg.offsetHeight-this.zoom.offsetHeight){
-									// 	top = this.smallImg.offsetTop+this.smallImg.offsetHeight-this.zoom.offsetHeight
-									// }
-									console.log(666)
+								move:function(left,top,radian){
+									// console.log(this.ele)
+									if(left<0){
+										left=0;
+									}else if(left >= this.ele[0].offsetLeft+this.ele.outerWidth()-this.$zoom.outerWidth()-32){
+										
+										left = this.ele.offset().left+this.ele.outerWidth()-this.$zoom.outerWidth()-32;
+									}
+									if(top<0){
+										top=0;
+										// console.log(this.ele.offset().top,top)
+									}else if(top >= this.ele.children().outerHeight()-this.$zoom.outerHeight()){
+										// console.log(this.ele.children().outerHeight)
+										top = this.ele.children().outerHeight()-this.$zoom.outerHeight();
+									}
+									// console.log(left,top)
+									this.$zoom.css('left',left)
+									this.$zoom.css('top',top)
+									// console.log(this.$bigbox.children())
+									this.$bigbox.children().css('left',-left/radian)
+									this.$bigbox.children().css('top',-top/radian)
+									
 								},
 								
 							}
@@ -220,7 +233,7 @@ requirejs(['config'],function(){
 							var z1 = new zoom($('.zoomimg>.img'));
 							z1.init();
 
-							// $('.zoomimg>.img').gdszoom();
+
 
 							$('.buyselect').on('click','.add',function(){
 								$('#goodsNum')[0].value++;
@@ -230,13 +243,41 @@ requirejs(['config'],function(){
 									$('#goodsNum')[0].value=1;
 								}
 
+							}).on('click','.addcar',function(){
+									var carCookie = document.cookie;
+									var okaddcar = carCookie.includes("isuser");
+									if(okaddcar === false){
+										alert('请登录')
+										return false;
+									}
+									if(okaddcar){
+										
+										var carCookiearr = carCookie.split('; ');
+										// console.log(cookiearr[0])
+										var $res = Number(carCookiearr[0].match(/\d/)[0]);
+										
+										var $numbers = $('#goodsNum').html();
+										var $img = data[$res-1].img;
+										var $goodName = data[$res-1].goodsName;
+										var $price = data[$res-1].price;
+										console.log($goodName)
+
+										// var now = new Date();
+										// now.setDate(now.getDate()+30)
+										// document.cookie = '$id=' + res +';expires=' + now+';path=/';
+
+										$.ajax({
+											url:'../../dist/writein.php',
+											dataType:'json',
+											data:{id:$res,numbers:$numbers,img:$img,goodsName:$goodName,price:$price,$goodsNum:5}
+											
+										})
+									}
+
 							})
 
 						}
 					})
-
-
-
 
 					$('footer').load('../html/footer.html')
 				});

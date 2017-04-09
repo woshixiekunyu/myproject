@@ -15,6 +15,16 @@
 	})
 	if(isuser){
 		$('.welcome span').html(user+'您好，欢迎光临可得眼镜网！');
+		$.ajax({
+			url:'../../dist/getsql.php',
+			dataType:'json',
+			success:function(data){
+				console.log(data.length)
+				$('header .nav .nav_right .tellNum').html(data.length)	
+			}
+		})
+		
 	}else{
 		$('.welcome span').html('您好，欢迎光临可得眼镜网！');
+		$('header .nav .nav_right .tellNum').html('0')	
 	}

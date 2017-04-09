@@ -65,7 +65,7 @@ requirejs(['config'],function(){
 
 								var $list = $('main>section>.goodlists>ul').children();
 								var $div = $('<div/>').addClass('collect');
-								var $addcar = $('<span/>').appendTo($div).html('加入购物车');
+								var $addcar = $('<span/>').addClass('addcar').appendTo($div).html('加入购物车');
 								var $i = $('<i/>').appendTo($addcar);
 
 								var $collect = $('<span/>').appendTo($div).html('收藏');
@@ -79,6 +79,75 @@ requirejs(['config'],function(){
 									document.cookie = 'id='+$id+';path:/';
 
 									location.href = 'details.html';
+								}).on('click','.addcar',function(){
+									var currentImg = $(this).parent().parent().children().has('img')
+									var cloneImg = currentImg.children().clone().addClass('cloneImg')
+													.css('left',currentImg[0].offsetLeft)
+													.css('top',currentImg[0].offsetTop).appendTo(currentImg);
+									// console.log(cloneImg.offset().top)
+									//  
+									var yspeed = -10;
+									var topTarget = cloneImg.offset().top;
+				                    var timer = setInterval(()=>{
+				                    	var currentTop = cloneImg[0].offsetTop;
+				                        yspeed-=20;
+
+				                        // 当currentTop到达目标值后，停止定时器
+				                        if(currentTop <= -topTarget){
+				                            clearInterval(timer);
+				                            
+				                        }
+
+				                        cloneImg[0].style.top = currentTop + yspeed + 'px';
+				                    },50);
+				                    console.log(currentImg.offset().left)
+				                    cloneImg.animate({left:-currentImg.offset().left,width:5},function(){
+				                        // 删除用于动画的图片
+
+				                       cloneImg.remove();
+
+				                        // 停止top抛物线定时器
+				                        clearInterval(timer);
+				                    });
+
+
+				                    
+									$.ajax({
+										url:'../../dist/mysql.php',
+										dataType:'json',
+										success:function(data){
+											var carCookie = document.cookie;
+											var okaddcar = carCookie.includes("isuser");
+											if(okaddcar === false){
+												alert('请登录')
+												return false;
+											}
+											if(okaddcar){
+												
+												// console.log(cookiearr[0])
+												
+												var $res = $(this).parent().parent().children().has('img').children().attr('data-set');
+												
+												var $numbers = data[$res-1].number;
+												console.log($numbers)
+												var $img = data[$res-1].img;
+												var $goodName = data[$res-1].goodsName;
+												var $price = data[$res-1].price;
+												// console.log($goodName)
+
+												// // var now = new Date();
+												// // now.setDate(now.getDate()+30)
+												// // document.cookie = '$id=' + res +';expires=' + now+';path=/';
+
+												$.ajax({
+													url:'../../dist/writein.php',
+													dataType:'json',
+													data:{id:$res,numbers:$numbers,img:$img,goodsName:$goodName,price:$price,$goodsNum:5}
+												})
+											}
+										}.bind(this)
+									})
+
 								})
 							}
 						})

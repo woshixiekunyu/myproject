@@ -16,6 +16,25 @@ requirejs(['config'],function(){
 				// 	}
 				// })
 				// console.log(user,pas)
+				var isremember;
+				var cookie = document.cookie.split('; ')
+				
+				cookie.forEach(function(item){
+					var arr = item.split('=');
+
+					if(arr[0] === 'isremember'){
+						isremember = arr[1]
+					}
+				})
+
+				
+				if(isremember){
+					$('#username')[0].value = user;
+				}else{
+					$('#username')[0].value = '';
+				}
+
+
 				console.log(777)
 				// 判断输入的值是否正确
 				$('#username').blur(function(){
@@ -30,6 +49,10 @@ requirejs(['config'],function(){
 					}
 
 				})
+				
+				
+
+
 				// 点击时各种条件
 				$('.btnlogin').on('click',function(){
 					
@@ -40,14 +63,39 @@ requirejs(['config'],function(){
 					if($('#password').val() !== pas){
 						return false;
 					}
+
+
+
+
 					var isuser = true;
-					var now = new Date();
-					now.setDate(now.getDate()+30)
-					document.cookie = 'isuser=' + isuser +';expires=' + now+';path=/';
-					location.href='../index.html';
+					document.cookie = 'isuser=' + isuser +';path=/';
+
+					console.log($('.autosign')[0])
+
+					if($('.remember')[0].checked){
+						var now = new Date();
+						now.setDate(now.getDate()+30)
+						
+						isremember = true;
+						var now = new Date();
+						now.setDate(now.getDate()+30);
+						document.cookie = 'isremember=' + isremember +';expires=' + now+';path=/';
+
+					}
+					if($('.autosign')[0].checked){
+						
+						console.log(user,pas)
+						var now = new Date();
+						now.setDate(now.getDate()+30)
+						
+						document.cookie = 'username=' + user +';expires=' + now+';path=/';
+						document.cookie = 'password=' + pas +';expires=' + now+';path=/';
+						document.cookie = 'isuser=' + isuser +';expires=' + now+ ';path=/';
+					}
+					// location.href='../index.html';
 				})
 
-				
+
 				console.log(66)
 				$('footer').load('../html/loginfooter.html');
 			})

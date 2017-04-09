@@ -1,3 +1,51 @@
-body > nav { margin: 50px 0 50px 200px; }
+body > nav { width: 989px; margin: 50px 0 50px 150px; overflow: hidden; }
 
-body > nav span { font-size: 18px; margin-left: 30px; }
+body > nav a { float: left; }
+
+body > nav span { float: left; font-size: 18px; margin-left: 30px; margin-top: 20px; }
+
+body > nav .carprogress { font-size: 12px; color: #999; float: right; margin-top: 18px; position: relative; display: flex; }
+
+body > nav .carprogress .progress { width: 490px; height: 24px; background: url("../img/car-progress.png") no-repeat; }
+
+body > nav .carprogress .progress1 { position: absolute; left: 50px; top: 26px; }
+
+body > nav .carprogress .progress2 { position: absolute; left: 210px; top: 26px; }
+
+body > nav .carprogress .progress3 { position: absolute; left: 373px; top: 26px; }
+
+body > main > section { padding-left: 150px; }
+
+body > main > section > .content { width: 989px; min-height: 200px; border: 1px solid #ccc; font-size: 12px; color: #666; }
+
+body > main > section > .content a { color: #90c31f; }
+
+body > main > section > .content #null { margin-top: 50px; margin-left: 300px; display: flex; }
+
+body > main > section > .content #null i { display: block; width: 44px; height: 39px; background: url("../img/green-car.png") no-repeat; }
+
+body > main > section > .content #null .tips { margin-left: 20px; line-height: 20px; }
+
+body > main > section > .content #null .tips span { display: block; }
+
+body > main > section > .content table { width: 989px; text-align: center; }
+
+body > main > section > .content table thead tr td { height: 30px; border-right: 1px solid #ccc; border-bottom: 1px solid #ccc; }
+
+body > main > section > .content table thead tr td:last-child { border-right: 0; }
+
+body > main > section > .content table tbody img { width: 66px; }
+
+body > main > section > .content table tbody tr { height: 80px; }
+
+body > main > section > .content table tbody tr td { width: 20%; height: 30px; border-right: 1px solid #ccc; border-bottom: 1px solid #ccc; }
+
+body > main > section > .content table tbody tr td:last-child { border-right: 0; }
+
+body > main > section > .content table tbody tr:last-child td { border-bottom: 0; }
+
+body > main > section .toPay { width: 989px; text-align: right; margin-top: 20px; }
+
+body > main > section .toPay span:last-child { display: inline-block; width: 200px; height: 40px; background: #f00; text-align: center; line-height: 40px; cursor: pointer; color: #fff; }
+
+body > main > section .toPay span:last-child:hover { opacity: 0.7; color: red; background-color: yellow; }

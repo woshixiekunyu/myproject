@@ -84,14 +84,15 @@ requirejs(['config'],function(){
 
 
 					//把用户名密码保存起来
-					var now = new Date();
-					now.setDate(now.getDate()+30)
-					document.cookie = 'username=' + $user+';expires=' + now+';path=/';
-					document.cookie = 'password=' + $password+';expires=' + now+';path=/';
+					
+					document.cookie = 'username=' + $user+';path=/';
+					document.cookie = 'password=' + $password+';path=/';
 
 					window.location.href="../html/login.html"  
 				})
 
+				
+				
 				$('footer').load('../html/loginfooter.html')
 			})
 			

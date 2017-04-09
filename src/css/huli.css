@@ -62,6 +62,8 @@ main section .goodlists ul li a { cursor: pointer; color: #666666; }
 
 main section .goodlists ul li a:hover { color: #ff6600; }
 
+main section .goodlists ul li a .cloneImg { position: absolute; }
+
 main section .goodlists ul li:hover { height: 382px; z-index: 10; margin: 19px 19px -35px 3px; border-width: 2px; border-bottom: 2px solid #ccc; }
 
 main section .goodlists ul li:hover .collect { display: block; }

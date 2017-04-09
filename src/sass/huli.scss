@@ -139,6 +139,7 @@ main{
 						cursor:pointer;
 						color:$fcolor;
 						&:hover{color:$hcolor;}
+						.cloneImg{position: absolute;}
 					}
 					&:hover{
 						height:382px;

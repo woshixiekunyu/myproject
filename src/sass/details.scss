@@ -9,7 +9,7 @@ body{
 		position: absolute;
 		left: 0;top: 0;
 		overflow: hidden;
-		img{width: 1200px;height: 1200px}
+		img{width: 1200px;height: 1200px;position: absolute;left: 0;top: 0;}
 	}
 	main{
 		font-size:12px;
@@ -222,7 +222,7 @@ body{
 							}
 							.tips{
 								position: absolute;
-								left: 94px;
+								left: 125px;
 								top: -10px;
 								b{
 									text-align:center;
