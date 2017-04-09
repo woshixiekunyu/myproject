@@ -137,3 +137,13 @@ header .nav .nav_right span:last-child i { margin-right: 5px; margin-top: 5px; }
 .hot_chengse { height: 36px; width: 31px; background-position: 0 -157px; }
 
 .hot_qianlv { height: 36px; width: 32px; background-position: 0 -193px; }
+
+.details_ic { background: url(../img/details_ic.png) no-repeat; display: inline-block; }
+
+.details_ic_1 { height: 20px; width: 17px; background-position: 0 0; }
+
+.details_ic_2 { height: 18px; width: 19px; background-position: 0 -20px; }
+
+.details_ic_4 { height: 20px; width: 20px; background-position: 0 -38px; }
+
+.details_ic_3 { height: 20px; width: 20px; background-position: 0 -58px; }

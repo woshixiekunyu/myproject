@@ -75,7 +75,10 @@ requirejs(['config'],function(){
 								var $lists = $('main>section>.goodlists>ul');
 								$lists.on('click','img',function(){
 									var $id = $(this).attr('data-set');
-									location.href = 'details'+$id+'.html';
+
+									document.cookie = 'id='+$id+';path:/';
+
+									location.href = 'details.html';
 								})
 							}
 						})

@@ -13,7 +13,6 @@
 			isuser = arr[1]
 		}
 	})
-	console.log(666)
 	if(isuser){
 		$('.welcome span').html(user+'您好，欢迎光临可得眼镜网！');
 	}else{
